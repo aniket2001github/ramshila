@@ -1269,6 +1269,31 @@
   </span>
   <!-- End Scroll Up Button -->
 
+  <script>
+    /* ----------  AUTO-SLIDE (4 s)  ---------- */
+let autoId;                         // holds the setInterval id
+const interval = 4000;              // 4 seconds
+
+function startAutoSlide () {
+  autoId = setInterval(()=> {
+      document.querySelector('.next').click();   // reuse existing “next” logic
+  }, interval);
+}
+
+function stopAutoSlide () {
+  clearInterval(autoId);
+}
+
+/* kick it off once the DOM is ready */
+document.addEventListener('DOMContentLoaded', startAutoSlide);
+
+/* optional: pause when user hovers slider */
+const sliderBox = document.querySelector('.slider_container');
+sliderBox.addEventListener('mouseenter', stopAutoSlide);
+sliderBox.addEventListener('mouseleave', startAutoSlide);
+
+  </script>
+
   <!-- Script -->
   <script src="assets/js/jquery-3.6.0.min.js"></script>
   <script src="assets/js/wow.min.js"></script>
