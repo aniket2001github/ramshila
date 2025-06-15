@@ -20,15 +20,6 @@
   <link rel="stylesheet" href="assets/css/slick.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
 
-
-  <!-- HEAD  ──────────────────────────────────────────────── -->
-<link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-
-<link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
-<!-- … your own stylesheets after this if you like … -->
-
 </head>
 
 <body>
@@ -1273,47 +1264,7 @@
   </span>
   <!-- End Scroll Up Button -->
 
-  <script>
-    /* ------------  HERO SLIDER  ------------------ */
-$(function () {
 
-  /* Use data-src="..." as CSS background-image */
-  $('.cs_bg_filed').each(function () {
-    $(this).css('background-image', 'url(' + $(this).data('src') + ')');
-  });
-
-  /* 01  – Main hero slider */
-  $('.cs_hero_slider_thumb').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    fade: true,              // nice cross-fade
-    arrows: false,           // turn on later if you add arrow buttons
-    autoplay: true,          // <-- makes it automatic
-    autoplaySpeed: 4000,     // 4 s per slide
-    speed: 900,              // transition speed
-    pauseOnHover: true,      // stop when user hovers
-    asNavFor: '.cs_hero_slider_nav'
-  });
-
-  /* 02 – Thumbnail / dots strip (optional) */
-  $('.cs_hero_slider_nav').slick({
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    asNavFor: '.cs_hero_slider_thumb',
-    focusOnSelect: true,
-    arrows: false,
-    centerMode: true,
-    variableWidth: true
-  });
-
-});
-
-  </script>
-
-
-<!-- just before </body> ─────────────────────────────── -->
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
   <!-- Script -->
   <script src="assets/js/jquery-3.6.0.min.js"></script>
