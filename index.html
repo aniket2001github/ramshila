@@ -1264,38 +1264,30 @@
   <script src="assets/js/wow.min.js"></script>
   <script src="assets/js/jquery.slick.min.js"></script>
   <script src="assets/js/odometer.js"></script>
-  <script src="assets/js/main.js"></script>
-  
+
   <script>
-  /* turn every element with .cs_bg_filed into a CSS background */
+  /* Turn each data-src into a CSS background */
   $('.cs_bg_filed').each(function () {
-      $(this).css('background-image', 'url(' + $(this).data('src') + ')');
+    $(this).css('background-image', 'url(' + $(this).data('src') + ')');
   });
 
-  /* main banner carousel */
+  /* HERO CAROUSEL ------------------------------------------------- */
   $('.cs_hero_slider_thumb').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      fade: true,
-      arrows: false,
-      autoplay: true,
-      autoplaySpeed: 4000,   // 4 s
-      speed: 800,
-      pauseOnHover: true,
-      asNavFor: '.cs_hero_slider_nav'
-  });
-
-  /* thumbnail / dot strip (optional, empty for now) */
-  $('.cs_hero_slider_nav').slick({
-      slidesToShow: 5,
-      slidesToScroll: 1,
-      asNavFor: '.cs_hero_slider_thumb',
-      focusOnSelect: true,
-      centerMode: true,
-      variableWidth: true,
-      arrows: false
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+    arrows: false,        // set true if you later add prev/next buttons
+    autoplay: true,
+    autoplaySpeed: 4000,  // 4 s
+    speed: 900,
+    pauseOnHover: true
+    /* asNavFor: '.cs_hero_slider_nav'   // re-enable when nav exists */
   });
 </script>
+
+  <script src="assets/js/main.js"></script>
+
+  
 
 </body>
 
