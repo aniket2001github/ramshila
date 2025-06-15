@@ -1285,6 +1285,46 @@
   });
 </script>
 
+<script>
+$(function () {
+
+  /* 0) any element that carries  data-src="…" should become a bg-image */
+  $('.cs_bg_filed').each(function () {
+    $(this).css('background-image', 'url(' + $(this).data('src') + ')');
+  });
+
+  /* 1)  HERO banner – cross-fade every 4 s */
+  $('.cs_hero_slider_thumb').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    speed: 900,
+    pauseOnHover: true            // optional
+  });
+
+  /* 2)  BRAND logos – horizontal carousel */
+  $('.cs_brands_section .cs_slider_container').slick({
+    slidesToShow: 5,              // desktop
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,               // overrides data-autoplay if it is “0”
+    autoplaySpeed: 2500,
+    speed: 600,
+    infinite: true,
+    responsive: [
+      { breakpoint: 1200, settings: { slidesToShow: 4 } },
+      { breakpoint: 992,  settings: { slidesToShow: 3 } },
+      { breakpoint: 768,  settings: { slidesToShow: 2 } }
+    ]
+  });
+
+});
+</script>
+
+
   <script src="assets/js/main.js"></script>
 
   
