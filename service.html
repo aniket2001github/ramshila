@@ -900,6 +900,121 @@
   </span>
   <!-- End Scroll Up Button -->
 
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/9045553422" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp">
+  </a>
+
+  <style>
+    /* WhatsApp Floating Button Styles */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 999;
+      background-color: #25d366;
+      border-radius: 50%;
+      padding: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      animation: pulse 1.5s infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp-float img {
+      width: 30px;
+      height: 30px;
+    }
+
+    /* Animation: Pulse */
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+      }
+
+      70% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+      }
+
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+      }
+    }
+  </style>
+
+
+  <!-- Add this to your index.html file -->
+
+  <!-- Rotating Image -->
+  <a href="contact.html" class="rotating-image-link">
+    <img src="assets/img/pmjay-logo.png" alt="PM-JAY Logo" class="rotating-image">
+  </a>
+
+  <style>
+    /* Rotating Image Styling */
+    .rotating-image-link {
+      position: fixed;
+      bottom: 90px;
+      /* Adjust to avoid overlap with scroll-up button */
+      right: 20px;
+      z-index: 999;
+    }
+
+    .rotating-image {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      animation: rotate 4s linear infinite;
+      /* Continuous rotation */
+    }
+
+    /* Keyframes for rotation */
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Scroll-Up Button Styling */
+    .cs_scrollup {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      background-color: #007bff;
+      color: white;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .cs_scrollup:hover {
+      background-color: #0056b3;
+    }
+  </style>
+
+
   <!-- Script -->
   <script src="assets/js/jquery-3.6.0.min.js"></script>
   <script src="assets/js/wow.min.js"></script>
