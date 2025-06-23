@@ -1419,31 +1419,37 @@
 
 <!-- Add this to your index.html file -->
 
-<!-- Contact Image -->
-<a href="contact.html" class="contact-image-link">
-  <img src="assets/img/pmjay-logo.png" alt="PM-JAY Logo" class="contact-image">
+<!-- Rotating Image -->
+<a href="contact.html" class="rotating-image-link">
+  <img src="assets/img/pmjay-logo.png" alt="PM-JAY Logo" class="rotating-image">
 </a>
 
 <style>
-  /* Contact Image Styling */
-  .contact-image-link {
+  /* Rotating Image Styling */
+  .rotating-image-link {
     position: fixed;
     bottom: 90px; /* Adjust to avoid overlap with scroll-up button */
     right: 20px;
     z-index: 999;
   }
 
-  .contact-image {
+  .rotating-image {
     width: 60px;
     height: 60px;
     border-radius: 50%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    transition: transform 0.3s ease;
+    animation: rotate 4s linear infinite; /* Continuous rotation */
   }
 
-  .contact-image:hover {
-    transform: scale(1.1);
+  /* Keyframes for rotation */
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
 
   /* Scroll-Up Button Styling */
